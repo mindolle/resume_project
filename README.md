@@ -5,9 +5,9 @@
 - .env 파일에 어떤 환경변수가 추가되어야 하는지 작성합니다.
 - key=value 형태에서 key만 나열합니다. value는 비밀!
 
-- DB_URL="mysql://root:aaaa4321@express-database.c3uyg8ia4p5r.ap-northeast-2.rds.amazonaws.com:3306/homework"
-- JWT_SECRET="custom-secret-key"
-- REF_KEY="refresh-secret-key"
+- DB_URL=
+- JWT_SECRET
+- REF_KEY
 - 그 밖의 사용한 환경변수를 나열해 주세요.
 
 # API 명세서 URL
@@ -30,6 +30,7 @@
     - 
     - 해당 문제점을 보완하기 위한 방법으로는 어떤 것이 있을까요?
     - Refresh Token을 사용하여 Access Token이 노출되었을 때에도 사용자가 새로운 Access Token을 발급받을 수 있도록 합니다.
+    - Access Token의 유효기간을 설정한다.
 
 3. **인증과 인가**
     - 인증과 인가가 무엇인지 각각 설명해 주세요.
@@ -42,6 +43,12 @@
 
 4. **Http Status Code**
     - 과제를 진행하면서 사용한 Http Status Code를 모두 나열하고, 각각이 의미하는 것과 어떤 상황에 사용했는지 작성해 주세요.
+    - 로그인, 삭제, 조회 : 200 
+    - 회원가입, 수정 : 201 
+    - 401
+    - 403
+    - 404
+    - 409
 
 5. **리팩토링**
     - MySQL, Prisma로 개발했는데 MySQL을 MongoDB로 혹은 Prisma 를 TypeORM 로 변경하게 된다면 많은 코드 변경이 필요할까요? 주로 어떤 코드에서 변경이 필요한가요?
